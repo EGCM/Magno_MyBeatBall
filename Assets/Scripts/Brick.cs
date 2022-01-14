@@ -25,14 +25,13 @@ public class Brick : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) {
         hits--;
-
+        GameManager.Instance.Score += points;
+        _renderer.sharedMaterial = hitMaterial;
+        Invoke("RestoreMaterial", 0.05f);
         if (hits <= 0)
         {
             Destroy(gameObject);
         }
-
-        _renderer.sharedMaterial = hitMaterial;
-        Invoke("RestoreMaterial", 0.05f);
     }
 
     private void RestoreMaterial()
