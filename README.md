@@ -1,5 +1,7 @@
 # Magno_MyBeatBall
 
+![Rotating bricks](https://github.com/EGCM/Magno_MyBeatBall/blob/main/pics/rotating_bricks.png)
+
 ![img1](https://github.com/EGCM/Magno_MyBeatBall/blob/main/pics/img1.png)
 
 ![img2](https://github.com/EGCM/Magno_MyBeatBall/blob/main/pics/img2.png)
