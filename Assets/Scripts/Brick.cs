@@ -8,19 +8,20 @@ public class Brick : MonoBehaviour
     public int points = 10;
     public Vector3 rotator;
     public Material hitMaterial;
+    public GameObject cube;
 
     Material _origMaterial;
     Renderer _renderer;
     void Start()
     {
-        // transform.Rotate(rotator * (transform.position.x + transform.position.y) * 0.1f);
-        _renderer = GetComponent<Renderer>();
+        _renderer = cube.GetComponent<Renderer>();
         _origMaterial = _renderer.sharedMaterial;
+        cube.transform.Rotate(rotator * (cube.transform.position.x + cube.transform.position.y) * 0.1f);
     }
 
     void Update()
     {
-        // transform.Rotate(rotator * Time.deltaTime);
+        cube.transform.Rotate(rotator * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision) {
